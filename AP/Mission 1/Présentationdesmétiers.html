@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Présentation des Métiers</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            animation: slideIn 1s ease-out;
+            margin-top: 20px;
+        }
+
+        hr {
+            width: 50%;
+            margin: 20px auto;
+            border: 2px solid darkblue;
+            animation: pulse 2s infinite;
+        }
+
+        h2 {
+            animation: fadeIn 2s ease-in;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+            font-size: 1.2em;
+            transition: transform 0.3s, color 0.3s;
+            animation: fadeIn 2s forwards;
+            opacity: 0;
+            animation-delay: calc(0.5s * var(--i));
+            --i: 0; /* Placeholder variable for animation delay */
+        }
+
+        li:hover {
+            transform: scale(1.1) rotate(2deg);
+            color: darkblue;
+            animation: bounce 0.5s;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: darkblue;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-5px);
+            }
+            60% {
+                transform: translateY(-3px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="images_2/onisep.jpg" alt="Onisep Image">
+
+    <h1>Présentation des métiers de développeur informatique</h1>
+    <hr>
+    <h2>Sommaire</h2>
+    <ul>
+        <li style="--i: 1;"><a href="dev1.html">Développeur Front End</a></li>
+        <li style="--i: 2;"><a href="dev2.html">Développeur Mobile</a></li>
+        <li style="--i: 3;"><a href="dev3.html">Développeur Back End</a></li>
+        <li style="--i: 4;"><a href="dev4.html">Développeur FullStack</a></li>
+        <li style="--i: 5;"><a href="lycee.html">Lycée Parc de Vilgénis</a></li>
+        <li style="--i: 6;"><a href="../../index.html">Retour au sommaire</a></li>
+    </ul>
+</body>
+</html>
