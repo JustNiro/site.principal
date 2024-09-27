@@ -1,133 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Présentation des Métiers</title>
     <style>
         body {
-            background-color: lightblue;
+            background: linear-gradient(135deg, #AD8141, #F1B07C);
             font-family: Arial, sans-serif;
+            color: #333;
             margin: 0;
             padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Animation d'apparition pour le titre */
+        header {
             text-align: center;
-            transition: background-color 0.5s;
+            margin-bottom: 40px;
         }
 
-        img {
-            width: 50%;
-            height: auto;
-            animation: fadeIn 2s ease-in;
-        }
-
-        h1 {
-            animation: slideIn 1s ease-out;
-            margin-top: 20px;
-        }
-
-        hr {
-            width: 50%;
-            margin: 20px auto;
-            border: 2px solid darkblue;
-            animation: pulse 2s infinite;
-        }
-
-        h2 {
-            animation: fadeIn 2s ease-in;
-            margin-top: 30px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 15px 0;
-            font-size: 1.2em;
-            transition: transform 0.3s, color 0.3s;
-            animation: fadeIn 2s forwards;
+        header h1 {
+            font-size: 2.5em;
+            color: #FFFFFF;
             opacity: 0;
-            animation-delay: calc(0.5s * var(--i));
-            --i: 0; /* Placeholder variable for animation delay */
-        }
-
-        li:hover {
-            transform: scale(1.1) rotate(2deg);
-            color: darkblue;
-            animation: bounce 0.5s;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: darkblue;
-            text-shadow: 1px 1px 2px black;
+            animation: fadeIn 2s forwards;
+            animation-delay: 0.5s; /* Délai avant l'animation */
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: translateY(-20px);
             }
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
+        }
+
+        /* Style du menu de navigation */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 15px 0;
+            opacity: 0;
+            animation: slideIn 1s forwards;
+            animation-delay: calc(0.5s + var(--i)); /* Délai pour chaque lien */
         }
 
         @keyframes slideIn {
             from {
-                transform: translateY(-50px);
                 opacity: 0;
+                transform: translateX(-50px);
             }
             to {
-                transform: translateY(0);
                 opacity: 1;
+                transform: translateX(0);
             }
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
+        /* Liens de navigation */
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: #333;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-5px);
-            }
-            60% {
-                transform: translateY(-3px);
-            }
+        /* Effet au survol des liens */
+        nav ul li a:hover {
+            background-color: #ff6600;
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
-    <img src="images_2/onisep.jpg" alt="Onisep Image">
+    <img src="images_2/onisep.jpg" alt="Onisep Image" width="50%" height="50%">
 
+<!-- En-tête -->
     <h1>Présentation des métiers de développeur informatique</h1>
     <hr>
     <h2>Sommaire</h2>
+
+    <!-- Menu de navigation -->
+    <nav>
     <ul>
-        <li style="--i: 1;"><a href="dev1.html">Développeur Front End</a></li>
-        <li style="--i: 2;"><a href="dev2.html">Développeur Mobile</a></li>
-        <li style="--i: 3;"><a href="dev3.html">Développeur Back End</a></li>
-        <li style="--i: 4;"><a href="dev4.html">Développeur FullStack</a></li>
-        <li style="--i: 5;"><a href="lycee.html">Lycée Parc de Vilgénis</a></li>
-        <li style="--i: 6;"><a href="../../index.html">Retour au sommaire</a></li>
+        <li style="--i: 0s"><a href="dev1.html">Développeur Front End</a></li>
+        <li style="--i: 0.2s"><a href="dev2.html">Développeur Mobile</a></li>
+        <li style="--i: 0.4s"><a href="dev3.html">Développeur Back End</a></li>
+        <li style="--i: 0.6s"><a href="dev4.html">Développeur FullStack</a></li>
+        <li style="--i: 0.8s"><a href="lycee.html">Lycée Parc de Vilgénis</a></li>
+        <li style="--i: 1s"><a href="../../index.html">Retour au sommaire</a></li>
     </ul>
+    </nav>
 </body>
 </html>
+
