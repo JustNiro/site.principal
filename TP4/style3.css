@@ -63,9 +63,6 @@ nav ul li a:hover {
     float: inline-start;
 }
 
-.retour{
-    align: left;
-}
 .square1 { background-color: #FFD700; } /* Yellow */
 .square2 { background-color: #32CD32; } /* Green */
 .square3 { background-color: #FF8C00; } /* Orange */
