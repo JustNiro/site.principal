@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Style de base */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image5/paysage.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* Centre le contenu */
+        aside {
+            background-color: #48c491;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        /* Liste sans puces */
+        ul {
+            padding: 0;
+        }
+        
+        li {
+            list-style-type: none;
+            margin: 15px 0;
+            animation: bounceIn 1s ease both;
+        }
+
+        /* Style des liens */
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.4s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        /* Effet de hover avec rotation */
+        a:hover {
+            color: #007bff;
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        /* Animation d'apparition de aside */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation de rebond pour chaque élément */
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(-20px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05) translateY(10px);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* Bouton de retour */
+        .back-link {
+            margin-top: 25px;
+            font-size: 16px;
+            color: #26ff00;
+            transition: color 0.4s, transform 0.4s;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        
+        /* Animation du bouton retour */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Effet hover sur le bouton retour */
+        .back-link:hover {
+            color: #83b300;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <aside>
+        <ul>
+            <li><a href="../TP_devoir/tp1/présentationBTSSIO.html">TP1</a></li>
+            <li><a href="../TP2/Sommaire.html">TP2</a></li>
+            <li><a href="../TP3/Tableau.html">TP3</a></li>
+            <li><a href="../TP4/Bienvenue dans TP 4.html">TP4</a></li>
+            <li><a href="../TP_JS1/Accueil.html">TP de Javascript</a></li>
+        </ul>
+    </aside>
+
+    <a href="../index.html" class="back-link">Retour au Sommaire</a>
+
+</body>
+</html>
