@@ -124,20 +124,24 @@
 .dropdown-content li a {
     padding: 10px;
     color: #000;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content2 {
     display: none;
     position: absolute;
-    background-color: #18e3e7b3;
+    background-color: #2963a7;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     min-width: 160px;
     z-index: 1;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateY(10px);
 }
 
 .dropdown-content2 li a {
     padding: 10px;
     color: #000;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content3 {
@@ -147,11 +151,14 @@
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     min-width: 160px;
     z-index: 1;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateY(10px);
 }
 
 .dropdown-content3 li a {
     padding: 10px;
     color: #000;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content4 {
@@ -161,11 +168,14 @@
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     min-width: 160px;
     z-index: 1;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateY(10px);
 }
 
 .dropdown-content4 li a {
     padding: 10px;
     color: #000;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content5{
@@ -175,11 +185,14 @@
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     min-width: 160px;
     z-index: 1;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateY(10px);
 }
 
 .dropdown-content5 li a {
     padding: 10px;
     color: #000;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content6 {
@@ -189,11 +202,14 @@
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     min-width: 160px;
     z-index: 1;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateY(10px);
 }
 
 .dropdown-content6 li a {
     padding: 10px;
     color: #000;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content li a:hover {
@@ -203,7 +219,7 @@
     background-color: #e81919;
 }
 .dropdown-content3 li a:hover {
-    background-color: #4d9ea0;
+    background-color: #292fa7;
 }
 .dropdown-content4 li a:hover {
     background-color: #e1f53d;
@@ -218,65 +234,87 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown2:hover .dropdown-content2 {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown3:hover .dropdown-content3 {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown4:hover .dropdown-content4 {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown5:hover .dropdown-content5 {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown6:hover .dropdown-content6 {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .menu{
     background-color: #51b84c; 
     color: #000; 
+    transition: background-color 0.3s ease;
 }
 
 .menu2{
     background-color: #b8544c;
     color: #000; 
+    transition: background-color 0.3s ease;
 }
 
 .menu3{
     background-color: #4ca6b8; 
     color: #000;
+    transition: background-color 0.3s ease;
 }
 
 .menu4{
     background-color: #ad8e3c; 
     color: #000; 
+    transition: background-color 0.3s ease;
 }
 
 .menu5{
     background-color: #9f3cad; 
     color: #000; 
+    transition: background-color 0.3s ease;
 }
 
 .menu6{
     background-color: #3c4bad; 
-    color: #000; /
+    color: #000; 
+    transition: background-color 0.3s ease;
 }
 
 header{
     text-align: center;
+    background: linear-gradient(90deg, #000000, #4d9ea0);
+    color: #fff;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 header h1 {
     margin-bottom: 10px;
-    background-color: #4d9ea0;
+    background: linear-gradient(90deg, #000000, #4d9ea0);
 }
 
 header hr {
@@ -295,12 +333,33 @@ header input[type="checkbox"] {
 .title {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(90deg, #000000, #ffcc00);
+    background: linear-gradient(90deg, #000000, #4d9ea0);
     background-size: cover;
     background-position: 10%;
     color: white;
     height: 100%;
+    animation: slideIn 1s ease-out;
 }
+
+@keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
 @media screen and (max-width : 680px) {
     header label {
@@ -364,7 +423,7 @@ width: 100%;
                 </ul></li>
             <li class="nav-item2 dropdown2"><a href="#">JavaScript</a>
                 <ul class="dropdown-content2">
-                    <small class="menu2"><a href="#">TP 1</a></small>
+                    <small class="menu2"><a href="../tp_js1/Accueil.html">TP 1</a></small>
                     <small class="menu2"><a href="#">TP 2</a></small>
                     <small class="menu2"><a href="#">TP 3</a></small>
                     <small class="menu2"><a href="#">TP 4</a></small>
@@ -395,6 +454,7 @@ width: 100%;
                     <small class="menu5"><a href="../mission2/Mission2.html">Mission 2</a></small>
                     <small class="menu5"><a href="../mission3/évènement.html">Mission 3</a></small>
                     <small class="menu5"><a href="../mission4/Page D'accueil.html">Mission 4</a></small>
+                    <small class="menu5"><a href="../mission6/Mission 6.pdf" target="_blank">Mission 6</a></small>
                 </ul>
             </li>
             <li class="nav-item6 dropdown6"><a href="#">Certification</a>
