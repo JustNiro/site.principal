@@ -58,6 +58,23 @@
             color: red;
             font-weight: bold;
         }
+
+        .animated-button {
+            background-color: #35424a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 5px; /* Ajout d'espacement autour des boutons */
+        }
+
+        .animated-button:hover {
+            background-color: #2980b9; /* Couleur d'arrière-plan lors du survol */
+            transform: scale(1.1); /* Effet de zoom au survol */
+        }
     </style>
 </head>
 <body>
@@ -173,5 +190,9 @@
     </div>
 
     <script src="test.js"></script>
+
+    <a href="../sommaire.html">
+        <button class="animated-button"> Retour aux Missions</button>
+    </a>
 </body>
 </html>
